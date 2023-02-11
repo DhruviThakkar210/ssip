@@ -1,0 +1,213 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Nunito', sans-serif;
+  background-color: #262527;
+  overflow:hidden;
+}
+
+input, textarea, button {
+  font-family: 'Nunito', sans-serif;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100vh;
+  color: #fae881;
+  overflow:hidden;
+}
+
+.flex_box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.box {
+  position: absolute;
+  background-color: black;
+  width: 50px;
+  height: 50px;
+  transition: 0.2s;
+}
+
+form {
+  position: absolute;
+  padding: 30px 20px;
+  width: 320px;
+  border-radius: 7px;
+  background-color: white;
+  backdrop-filter: blur(5px);
+  background-color: rgba(158, 189, 199, 0.288);
+  overflow: hidden;
+}
+
+.input {
+  display: flex;
+  flex-direction: column;
+}
+
+input, textarea {
+  padding: 8px 10px;
+  margin: 3px 8px 16px 8px;
+  background-color: rgba(222, 239, 248, 0.877);
+  border: 0px transparent;
+  border-radius: 5px;
+  color:rgb(97, 4, 184);
+  font-size: 16px;
+  word-break: break-all; /* haven't found the best solution here yet, paragraphs are difficult to deal with */
+  hyphens: auto;
+  z-index: 1;
+}
+
+label {
+  margin: 0 8px;
+  font-size: 14px;
+  color: white;
+}
+
+.button_wrapper {
+  display: flex;
+  justify-content: flex-end;
+}
+
+button {
+  padding: 8px 14px;
+  margin: 20px 8px 0 0;
+  border-width: 0px;
+  border-radius: 5px;
+  color: white;
+  background-color: #b69269;
+  transition: 0.3s;
+  z-index: 1;
+}
+
+button:hover {
+  color: rgb(60, 35, 153);
+  background-color: white;
+}
+
+.star {
+  position: absolute;
+  transition: 1s;
+  overflow: hidden;
+  opacity: 1;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  z-index: -90;
+}
+
+.star svg {
+  height: 100%;
+  width: auto;
+}
+
+.star_inner {
+  height: 15px;
+}
+
+.cover {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  pointer-events: none;
+  height: 100vh;
+  width: 100%;
+  z-index: 999;
+  overflow: hidden;
+}
+
+.ghost {
+  position: absolute;
+  padding: 8px 10px;
+  border: 0px transparent;
+  border-radius: 5px;
+  z-index: 1;
+  color:rgb(97, 4, 184);
+  font-size: 16px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.ghost > div {
+  margin: 0;
+  padding: 0;
+  transition: 5s;
+}
+
+.blank {
+  width: 4px;
+}
+
+form.fade {
+  animation: fade forwards ease 5s;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 1;
+    transform: translate(0vw, 0) skew(0);
+  }
+  20% {
+    opacity: 0.8;
+    transform: translate(0vw, 0) skew(0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate(50vw, -50vh) skew(-45deg);
+  }
+}
+
+form.fade_in {
+  animation: fade_in forwards ease 6s;
+}
+
+@keyframes fade_in {
+  0% {
+    opacity: 0;
+    transform: translate(-50vw, 150vh) skew(-45deg);
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0) skew(0);
+  }
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: rgb(140, 145, 216);
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: rgb(140, 145, 216);
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+  color: rgb(140, 145, 216);
+}
+
+.sign {
+  position: absolute;
+  color: white;
+  bottom: 10px;
+  right: 10px;
+  font-size: 10px;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
