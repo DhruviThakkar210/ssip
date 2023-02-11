@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>ssip</title>
+  <link href="https://fonts.googleapis.com/css?family=Quicksand:400,700" rel="stylesheet">
+	 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <style type="text/css">
+  	body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+.flip-card-back {
+  background-color: #2980b9;
+  color: white;
+  transform: rotateY(180deg);
+}
+  </style>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#"><img src="images/logo.jpg" class="rounded" alt="Cinque Terre" style="height: 10vh;"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+       
+<a class="navbar-brand" href="#" style="text-align: center;">FACE READER ATTENDENCE SYSTEM</a>
+       
+        
+        
+      
+      </ul>
+      <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+      <a class="navbar-brand" href="#"><img src="images/user.jpg" class="rounded"data-bs-toggle="modal" data-bs-target="#myModal" alt="Cinque Terre" style="height: 10vh;"></a>
+        <a class="navbar-brand" href="#"><img src="images/face.jpg" class="rounded"data-bs-toggle="modal" data-bs-target="#myModal" alt="Cinque Terre" style="height: 10vh;"></a>
+      <div class="modal" id="myModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">IMAGE UPLOAD </h4>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+      
+        <form method="post" action="insert.php">
+  <div class="row">
+  
+ 
+   
+     
+      <div class="col">
+      <input type="file" class="form-control" placeholder="upload image" name="image" id="fileToUpload">
+    </div>
+    
+
+      <div class="col">
+      <input type="submit" class="form-control"  name="submit" value="submit">
+    </div>
+  </div>
+</form>
+
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+      <a class="navbar-brand" href="#"><img src="images/admin.jpg" class="rounded" alt="Cinque Terre" style="height: 10vh;"></a>
+    </div>
+  </div>
+</nav>
+
+<div id="demo" class="carousel slide" data-bs-ride="carousel">
+
+  <!-- Indicators/dots -->
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+    <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+    <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+  </div>
+  
+  <!-- The slideshow/carousel -->
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="images/c1.jpeg" alt="Los Angeles" class="d-block" style="width:100%">
+    </div>
+    <div class="carousel-item">
+      <img src="images/c2.jpg" alt="Chicago" class="d-block" style="width:100%">
+    </div>
+    <div class="carousel-item">
+      <img src="images/c3.jpg" alt="New York" class="d-block" style="width:100%">
+    </div>
+  </div>
+  
+  <!-- Left and right controls/icons -->
+  <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </button>
+</div>
+
+<h2 class="text-center">AANGAN WADI NEW SCHEME FOR ATTENDENCE</h2>
+
+<div class="row">
+  <div class="col ">
+    <div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="images/user.jpg" alt="Avatar" style="width:300px;height:300px;">
+    </div>
+    <div class="flip-card-back">
+      <h1>user login</h1> 
+      <p>CREATE ACCOUNT </p> 
+      <p>IF U HAVE ACCOUNT THEN LOGIN N CHECK YOUR ATTENDENCE</p>
+    </div>
+  </div>
+</div>
+
+  </div>
+  <div class="col">
+    <div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="images/face.jpg" alt="Avatar" style="width:300px;height:300px;">
+    </div>
+    <div class="flip-card-back">
+      <h1>GO AND GIVE YOUR ATTENDENCE</h1> 
+      <p>SCANNER WILL </p> 
+      <p>SCAN YOUR FACE</p>
+    </div>
+  </div>
+</div>
+
+  </div>
+  <div class="col">
+    <div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="images/admin.jpg" alt="Avatar" style="width:300px;height:300px;">
+    </div>
+    <div class="flip-card-back">
+      <h1>ADMIN LOGIN</h1> 
+      <p>ADMIN CAN LOGIN AND </p> 
+      <p>CHECK THE DATA</p>
+    </div>
+  </div>
+</div>
+
+  </div>
+
+</div>
+<h2 style="text-align: center; margin-top: 50px;">KNOW MORE ABOUT YOU </h2>
+
+
+
+  <h3><b>B</b>ody <b>M</b>ass <b>I</b>ndex Calculator</h3>
+<form class="form" id="form" onsubmit="return validateForm()">
+<div class="row-one">
+  <input type="text" class="text-input" id="age" autocomplete="off" required/><p class="text">Age</p>
+  <label class="container">
+  <input type="radio" name="radio" id="f"><p class="text">Female</p>
+    <span class="checkmark"></span>
+  </label>
+  <label class="container">
+  <input type="radio" name="radio" id="m"><p class="text">Male</p>
+    <span class="checkmark"></span>
+  </label>
+  </div>
+
+<div class="row-two">
+  <input type="text" class="text-input" id="height" autocomplete="off" required><p class="text">Height (cm)</p>
+  <input type="text" class="text-input" id="weight" autocomplete="off" required><p class="text">Weight (kg)</p>
+</div>
+<button type="button" id="submit">Submit</button>
+
+</form>
+<script type="text/javascript">
+  var age = document.getElementById("age");
+var height = document.getElementById("height");
+var weight = document.getElementById("weight");
+var male = document.getElementById("m");
+var female = document.getElementById("f");
+var form = document.getElementById("form");
+
+function validateForm(){
+  if(age.value=='' || height.value=='' || weight.value=='' || (male.checked==false && female.checked==false)){
+    alert("All fields are required!");
+    document.getElementById("submit").removeEventListener("click", countBmi);
+  }else{
+    countBmi();
+  }
+}
+document.getElementById("submit").addEventListener("click", validateForm);
+
+function countBmi(){
+  var p = [age.value, height.value, weight.value];
+  if(male.checked){
+    p.push("male");
+  }else if(female.checked){
+    p.push("female");
+  }
+  form.reset();
+  var bmi = Number(p[2])/(Number(p[1])/100*Number(p[1])/100);
+      
+  var result = '';
+  if(bmi<18.5){
+    result = 'Underweight';
+     }else if(18.5<=bmi&&bmi<=24.9){
+    result = 'Healthy';
+     }else if(25<=bmi&&bmi<=29.9){
+    result = 'Overweight';
+     }else if(30<=bmi&&bmi<=34.9){
+    result = 'Obese';
+     }else if(35<=bmi){
+    result = 'Extremely obese';
+     }
+  
+  var h1 = document.createElement("h1");
+  var h2 = document.createElement("h2");
+
+  var t = document.createTextNode(result);
+  var b = document.createTextNode('BMI: ');
+  var r = document.createTextNode(parseFloat(bmi).toFixed(2));
+  
+  h1.appendChild(t);
+  h2.appendChild(b);
+  h2.appendChild(r);
+  
+  document.body.appendChild(h1);
+  document.body.appendChild(h2);
+  document.getElementById("submit").removeEventListener("click", countBmi);
+  document.getElementById("submit").removeEventListener("click", validateForm);
+}
+document.getElementById("submit").addEventListener("click", countBmi);
+</script>
+
+
+
+
+
+
+
+</body>
+</html>
